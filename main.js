@@ -39,15 +39,3 @@ function iterateArrayOfNumbers(array, num) {
     console.log(array[i] * num);
   }
 }
-
-// crear una funcion que reciba un array de numeros como parametro y devuelva el numero mas chico y mas alto del array sumados
-
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 5000];
-
-const sumMinHigh = (array) => {
-  let min = Math.min(...array);
-  let max = Math.max(...array);
-  console.log(min + max)
-};
-
-sumMinHigh(array)
