@@ -87,10 +87,11 @@ const readNumber = () => {
 // Funcion inicializadora, y verifica si ya hay una pizza en el storage
 function init() {
   const myStorage = JSON.parse(localStorage.getItem("lastPizza")) || "";
-  if (myStorage === "")pizzaContainer.innerHTML = '<small class="errorText">Tenés que ingresar un numero</small>'
-
+  if (myStorage === ""){
+    pizzaContainer.innerHTML =
+      '<small class="errorText">Tenés que ingresar un numero</small>';
+  }
   if (myStorage != "") {
-
     pizzaContainer.innerHTML = `
     <h1>${myStorage.nombre}</h1>
     <img src="${myStorage.imagen}" alt=${myStorage.nombre}"/>
