@@ -82,12 +82,19 @@ const readNumber = () => {
 
     showPizza(inputNumber.value);
   });
+
+  let victorio = document.querySelector(".with__love");
+
+  victorio.addEventListener("click", () => {
+    localStorage.removeItem("lastPizza");
+    window.location.reload()
+  });
 };
 
 // Funcion inicializadora, y verifica si ya hay una pizza en el storage
 function init() {
   const myStorage = JSON.parse(localStorage.getItem("lastPizza")) || "";
-  if (myStorage === ""){
+  if (myStorage === "") {
     pizzaContainer.innerHTML =
       '<small class="errorText">Tenés que ingresar un numero</small>';
   }
