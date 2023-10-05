@@ -1,58 +1,110 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
+  font-family: "Manrope", sans-serif;
 }
 
 body {
-  background: #252525;
-  font-family: "Poppins";
+  background-color: #131415;
+  color: #fff;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+}
+
+section {
+  padding: 2rem;
+  display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
-h1 {
-  margin-top: 2rem;
-  font-size: 2rem;
-  background: linear-gradient(to right, #fdc830, #f37335);
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  text-align: center;
+form {
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#inputNumber {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  color: white;
+  font-size: 1.2rem;
+  outline: none;
+  font-weight: 600;
+  border: 2px solid #333;
+  transition: border 150ms;
+}
+
+#inputNumber:focus {
+  border: 2px solid crimson;
+}
+
+#inputSubmit {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  background: transparent;
+  color: crimson;
+  font-weight: 600;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 80ms ease-in;
+}
+
+#inputSubmit:active {
+  transform: scale(0.95);
+}
+
+.showingPizza {
+  display: flex;
+  flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 1rem;
+  border-radius: 5px;
+  width: 20rem;
+}
+
+.showingPizza img {
+  width: 17rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.5);
+}
+
+.showingPizza h2 {
+  width: 100%;
   text-align: center;
-  flex-wrap: wrap;
+  background-color: rgba(220, 20, 60, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 1rem;
+  border-radius: 5px;
 }
 
-h2 {
-  color: white;
+.errorText {
+  display: inline-block;
+  font-size: 1rem;
+  border-radius: 40px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
   text-align: center;
+  color: rgb(238, 119, 119);
 }
 
-.logo {
-  margin-bottom: 10px;
-  height: 30px;
-}
-
-.pizza {
-  width: min(90%, 500px);
-  margin-top: 50px;
-}
-
-footer {
-  text-align: center;
-  color: white;
-  padding: 30px 0px;
-  position: absolute;
-  bottom: 0;
+.with__love {
+  font-size: 1.1rem;
+  position: fixed;
+  bottom: 30px;
 }
